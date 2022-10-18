@@ -1,2 +1,4 @@
-package com.cydeo.library.pages;public class nir {
+package com.cydeo.library.pages;
+
+public class nir {
 }
