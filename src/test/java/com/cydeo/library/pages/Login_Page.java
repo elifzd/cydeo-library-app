@@ -19,4 +19,7 @@ public class Login_Page {
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
+
+    @FindBy(id = "user_count")
+    public WebElement userCount;
 }

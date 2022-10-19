@@ -8,6 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
 import java.security.Key;
@@ -65,5 +66,26 @@ public class Login_Step_Definitions {
     @After
     public void tearDown(){
         Driver.closeDriver();
+    }
+
+
+    @When("I login using {string} and {string}")
+    public void iLoginUsingAnd(String username, String password) {
+        loginPage.userNameBox.sendKeys(username);
+        loginPage.passwordBox.sendKeys(password);
+    }
+
+    @Then("dashboard should be displayed")
+    public void dashboardShouldBeDisplayed() {
+        loginPage.loginButton.click();
+    }
+
+    @And("there should be {int} users")
+    public void thereShouldBeUsers(int numberOfUsers) {
+        String actualUserNumbers = loginPage.userCount.getText();
+        String expectedUserNumbers = String.valueOf(numberOfUsers);
+        Assert.assertTrue(actualUserNumbers.equals(expectedUserNumbers));
+
+
     }
 }
