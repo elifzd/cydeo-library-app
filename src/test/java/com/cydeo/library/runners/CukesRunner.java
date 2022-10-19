@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/cydeo/library/step_definitions",
-        tags = "@student"
+        tags = "@wip2",
+        dryRun = false
 )
 
 public class CukesRunner {
