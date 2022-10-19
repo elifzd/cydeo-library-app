@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = "com/cydeo/library/step_definitions"
+        glue = "com/cydeo/library/step_definitions",
+        tags = "@student"
 )
 
 public class CukesRunner {
