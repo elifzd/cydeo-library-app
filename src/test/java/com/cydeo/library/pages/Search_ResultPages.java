@@ -39,6 +39,6 @@ public class Search_ResultPages {
 
     @FindBy (xpath = "//th")
     public List<WebElement> allButton;
-
+//why it happened
 
 }
