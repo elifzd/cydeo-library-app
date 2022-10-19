@@ -84,7 +84,9 @@ public class Login_Step_Definitions {
     public void thereShouldBeUsers(int numberOfUsers) {
         String actualUserNumbers = loginPage.userCount.getText();
         String expectedUserNumbers = String.valueOf(numberOfUsers);
-        Assert.assertTrue(actualUserNumbers.equals(expectedUserNumbers));
+        System.out.println("expectedUserNumbers = " + expectedUserNumbers);
+       // Assert.assertTrue(actualUserNumbers.equals(expectedUserNumbers));
+        Assert.assertEquals(expectedUserNumbers,actualUserNumbers);
 
 
     }
